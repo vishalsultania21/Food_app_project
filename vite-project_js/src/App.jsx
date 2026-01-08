@@ -26,7 +26,7 @@ function App()
             <Route path="/bill" element={<Bill />} />
             <Route path="/waiter" element={<Waiter />} />
             <Route path="/signup" element={<SignUp />} />
-            <Route path="/profile" element={<Profile />} />
+            <Route path="/profile/*" element={<Profile />} />
             <Route path="*" element={<Error />} />
           </Route>
         </Routes>
