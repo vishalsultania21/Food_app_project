@@ -6,6 +6,12 @@ export function PostComponent({nameOfDish , image ,price,description,vegOrNot}) 
 
   const handleAddClick = () => {
     console.log("Added to cart");
+    //add items to localStorage
+    const existingCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    console.log("Existing items in cart:", existingCartItems);
+    const updatedCartItems = [...existingCartItems, {nameOfDish, image, price, description, vegOrNot}];
+    localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
+    console.log("Current items in cart:", localStorage.getItem("cartItems"));
   };
 
   const toggleVisibility = () => {

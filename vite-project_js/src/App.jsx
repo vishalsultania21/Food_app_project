@@ -15,7 +15,7 @@ function App()
   
   return (
       <>
-      
+      {localStorage.clear()}
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />} >
